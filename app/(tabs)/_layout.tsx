@@ -12,10 +12,25 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="settings"
+                name="search"
                 options={{
-                    title: 'Settings',
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+                    title: 'Search',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="search" color={color} />,
+                }}
+            />
+
+            <Tabs.Screen
+                name="cart"
+                options={{
+                    title: 'Cart',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="shopping-bag" color={color} />,
+                }}
+            />
+            <Tabs.Screen
+                name="profile"
+                options={{
+                    title: 'Profile',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
                 }}
             />
         </Tabs>
