@@ -6,7 +6,8 @@ const CategoryCard = (props)=>{
     const {title,image,color,id} = props.cardItem
     return(
 
-        <View className={`bg-orange-500 flex justify-between offer-card ${id %2 === 0 ? "flex-row-reverse pr-4 pl-2":"flex-row pl-4 pr-2"}`} style={{backgroundColor:`${color}`}}>
+        <View
+            className={`bg-orange-500 flex justify-between offer-card ${id %2 === 0 ? "flex-row-reverse pr-4 pl-2":"flex-row pl-4 pr-2"}`} style={{backgroundColor:`${color}`}}>
             <View className="">
                 <Text className={"text-white h1-bold leading-tight"}>
                     {title?.replace(" ","\n")}

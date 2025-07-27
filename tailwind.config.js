@@ -4,7 +4,8 @@ module.exports = {
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",         // All screens & layouts
     "./app/**/**/*.{js,jsx,ts,tsx}",      // Nested group routes like (tabs), (auth), etc.
-    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",      // Nested group routes like (tabs), (auth), etc.
+    "./src/Screens/**/*.{js,jsx,ts,tsx}",
     "./*.{js,jsx,ts,tsx}"                 // Root files (App.tsx, index.tsx)
   ],
 
