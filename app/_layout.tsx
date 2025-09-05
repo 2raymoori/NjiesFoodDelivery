@@ -1,16 +1,18 @@
-import { Stack } from 'expo-router';
-import "./global.css"
 import Login from "@/src/Screens/Login";
-export default function Layout() {
-  return (
-      <Login />
-  );
-}
+import { Stack } from 'expo-router';
+import { useState } from "react";
+import "./global.css";
 
-function Layoutttt() {
+export default function Layout() {
+    const [authState,setAuthState] = useState<boolean>(false);
+    if(authState){
+        return (
+            <Stack>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            </Stack>
+        )
+    }
     return (
-        <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        </Stack>
+                <Login onAuth={setAuthState} />
     );
 }

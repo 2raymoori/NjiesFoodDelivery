@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
-import {SafeAreaView} from "react-native-safe-area-context";
-import {Text, View, Dimensions, Image, Button, Pressable, TextInput} from "react-native";
-import {ImageBackground} from "react-native";
-import {images} from "@/constants";
-import {relative} from "expo-file-system/build/next/pathUtilities/path";
+import { images } from "@/constants";
+import React, { useState } from 'react';
+import { Dimensions, Image, ImageBackground, Pressable, Text, TextInput, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const Login = props => {
@@ -74,8 +72,10 @@ const Login = props => {
                                     <TextInput  secureTextEntry={true} placeholder={"PASSWORD"} className={"border-b-2 pt-4"}/>
                                 </View>
                                 <View>
-                                    <Pressable>
-                                        <Text className={"text-white bg-orange-500 py-2 text-center font-bold text-xl italic rounded-full"}>Login</Text>
+                                    <Pressable onPress={()=>{
+                                        props.onAuth(true)
+                                        console.log("Login attempt...")}}>
+                                        <Text className={"text-white bg-orange-500 py-2 text-center font-bold text-xl italic rounded-full"}>Register</Text>
                                     </Pressable>
                                 </View>
                                 <View className={"flex-row  item-center mt-6 items-center justify-center "}>
@@ -98,7 +98,7 @@ const Login = props => {
                             <TextInput secureTextEntry={true}  placeholder={"PASSWORD"}  className={"border-b-2 pt-4"}/>
                         </View>
                         <View>
-                            <Pressable>
+                            <Pressable onPress={()=>{props.onAuth(true)}}>
                                 <Text className={"text-white bg-orange-500 py-2 text-center font-bold text-xl italic rounded-full"}>Login</Text>
                             </Pressable>
                         </View>
